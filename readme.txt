@@ -2,9 +2,9 @@
 Contributors: automattic, royho, akeda, mattyza, bor0, woothemes
 Tags: credit card, stripe, apple pay, payment request, google pay, sepa, sofort, bancontact, alipay, giropay, ideal, p24, woocommerce, automattic
 Requires at least: 4.4
-Tested up to: 5.2.1
+Tested up to: 5.2.2
 Requires PHP: 5.6
-Stable tag: 4.2.3
+Stable tag: 4.2.4
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 Attributions: thorsten-stripe
@@ -112,6 +112,9 @@ If you get stuck, you can ask for help in the Plugin Forum.
 4. Checking out with a saved card.
 
 == Changelog ==
+
+= 4.2.4 - 2019-08-06 =
+* Update - WooCommerce 3.7 compatibility.
 
 = 4.2.3 - 2019-07-18 =
 * Fix - Ignore "payment failed" webhooks if they come after another payment has already succeeded for that order.
