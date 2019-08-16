@@ -132,9 +132,9 @@ class WC_Stripe_Subscription_Renewal_Test extends WP_UnitTestCase {
 			}
 
 			// Assert: the body metadata has these values.
-			$order_id                 = WC_Stripe_Helper::is_wc_lt( '3.0' ) ? $renewal_order->id : $renewal_order->get_id();
+			$order_id                 = WC_Stripe_Helper::is_wc_lt( '3.0' ) ? $renewal_order->id : (string) $renewal_order->get_id();
 			$expected_metadata_values = array(
-				'order_id'     => (string) $order_id,
+				'order_id'     => $order_id,
 				'payment_type' => 'recurring',
 			);
 			foreach ( $expected_metadata_values as $key => $value ) {
