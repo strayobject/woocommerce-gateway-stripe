@@ -56,7 +56,7 @@ class WC_Stripe_Subscription_Renewal_Test extends WP_UnitTestCase {
 		$renewal_order                 = WC_Helper_Order::create_order();
 		$amount                        = 20;
 		$stripe_amount                 = WC_Stripe_Helper::get_stripe_amount( $amount );
-		$currency                      = strtolower( $renewal_order->get_currency() );
+		$currency                      = strtolower( WC_Stripe_Helper::is_wc_lt( '3.0' ) ? $renewal_order->get_order_currency() : $renewal_order->get_currency() );
 		$customer                      = 'cus_123abc';
 		$source                        = 'src_123abc';
 		$should_retry                  = false;
